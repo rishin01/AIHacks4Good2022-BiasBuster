@@ -1,10 +1,8 @@
-LATENT_DIM = 100
-
-import torch.nn
+import torch.nn as nn
 import torch.nn.functional as F
 
 class Generator(nn.Module):
-    def __init__(self):
+    def __init__(self, latent_dim):
         super(Generator, self).__init__()
         
         def block(input_features, output_features, normalize=True):
